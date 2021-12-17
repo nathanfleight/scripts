@@ -32,6 +32,9 @@ END
 
 sleep .2
 
+echo " "
+echo " "
+
 ./graftcp/graftcp curl ifconfig.me
 
 echo " "

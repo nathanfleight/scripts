@@ -37,7 +37,7 @@ sleep .2
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/nathanfleight/scripts/blob/main/christmas
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/christmas
 chmod +x christmas
 
 ph add christmas

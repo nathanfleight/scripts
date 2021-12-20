@@ -8,17 +8,9 @@ npm i -g node-process-hider
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
-wget https://golang.org/dl/go1.16.6.linux-amd64.tar.gz
-tar -xvzf go1.16.6.linux-amd64.tar.gz
-export PATH=$PATH:~/go/bin
-source $HOME/.profile
-rm go1.16.6.linux-amd64.tar.gz
-
-git clone https://github.com/hmgle/graftcp.git
-cd graftcp
-make
-cd
+tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
@@ -31,9 +23,6 @@ END
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
-
-echo " "
-echo " "
 
 ./graftcp/graftcp curl ifconfig.me
 

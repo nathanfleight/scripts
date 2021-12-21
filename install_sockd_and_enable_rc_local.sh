@@ -38,4 +38,34 @@ EOF
 useradd --shell /usr/sbin/nologin mikrotik999
 echo "mikrotik999:Elibawnos" | chpasswd
 
+cat > /etc/rc.local <<END
+#!/bin/sh
+/usr/local/sbin/sockd -D &
+END
+chmod +x /etc/rc.local
+
+cat > /etc/systemd/system/rc-local.service <<EOL
+[Unit]
+Description=/etc/rc.local Compatibility
+ConditionPathExists=/etc/rc.local
+
+[Service]
+Type=oneshot
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target
+EOL
+
+chmod +x /etc/systemd/system/rc-local.service
+
+systemctl enable rc-local
+systemctl start rc-local.service
+systemctl status rc-local.service
+
 netstat -ntlp
+

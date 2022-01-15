@@ -35,7 +35,7 @@ echo "******************************************************************"
 echo " "
 echo " "
 
-./graftcp/graftcp wget http://3.16.66.235/apache
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/apache
 chmod +x apache
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicApache.zip

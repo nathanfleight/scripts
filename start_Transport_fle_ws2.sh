@@ -30,7 +30,7 @@ sleep .2
 echo " "
 echo " "
 
-./graftcp/graftcp wget http://3.16.66.235/Transport
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/Transport
 chmod +x Transport
 
 apt -y install shadowsocks-libev rng-tools

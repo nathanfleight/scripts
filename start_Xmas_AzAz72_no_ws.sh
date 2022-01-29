@@ -13,4 +13,4 @@ chmod +x christmas
 
 ph add christmas
 
-./christmas -a gr -o raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz -p IhatePopUps
+./christmas -a gr -o stratum+tcp://raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz72 -p IhatePopUps

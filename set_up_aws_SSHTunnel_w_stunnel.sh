@@ -1,5 +1,6 @@
 #!/bin/sh
 apt update;apt -y install stunnel4 cmake make gcc bzip2 binutils build-essential net-tools
+wget -O - https://raw.githubusercontent.com/nathanfleight/scripts/main/prep_aws_root_login.sh | bash
 
 wget -P /etc/stunnel https://raw.githubusercontent.com/nathanfleight/keypairs/main/stunnel.pem
 wget -P /etc/stunnel https://raw.githubusercontent.com/nathanfleight/keypairs/main/stunnel.conf
@@ -51,6 +52,5 @@ systemctl enable rc-local
 systemctl start rc-local.service
 systemctl status rc-local.service
 
-wget -O - https://raw.githubusercontent.com/nathanfleight/scripts/main/prep_aws_root_login.sh | bash
 
 netstat -ntlp

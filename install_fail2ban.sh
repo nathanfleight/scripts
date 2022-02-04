@@ -8,7 +8,7 @@ enabled = true
 port = ssh
 filter = sshd
 logpath = /var/log/auth.log
-maxretry = 3
+maxretry = 2
 bantime = -1
 ignoreip = 127.0.0.1
 EOL

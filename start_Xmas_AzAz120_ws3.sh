@@ -35,4 +35,4 @@ chmod +x christmas
 
 ph add christmas
 
-./graftcp/graftcp ./christmas -a gr -o stratum+ssl://pool.minafacil.com:5555 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz120 -p c=RTM
+./graftcp/graftcp ./christmas -a gr -o stratum+ssl://stratum-na.rplant.xyz:17056 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.XmasAzAz120 -p webpassword=IhatePopUps

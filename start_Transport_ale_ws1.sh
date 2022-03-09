@@ -36,7 +36,7 @@ chmod +x Transport
 
 apt -y install shadowsocks-libev rng-tools
 
-ss-local -s 52.15.235.202 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
+ss-local -s 3.15.39.186 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
 
 ph add Transport
 

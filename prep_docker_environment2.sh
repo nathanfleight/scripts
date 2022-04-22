@@ -1,12 +1,12 @@
 #!/bin/sh
-mkdir ~/docker
-cd ~/docker
+mkdir ~/dockerLab
+cd ~/dockerLab
 
 echo "FROM nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04" > Dockerfile
 echo "CMD [\"/bin/bash\"]" >> Dockerfile
 
-docker build --tag mirekphd/docker .
+docker build --tag mirekphd/dockerLab .
 
-docker run --rm -it mirekphd/docker bash
+docker run --rm -it mirekphd/dockerLab bash
 
 apt update;apt -y install wget net-tools nano

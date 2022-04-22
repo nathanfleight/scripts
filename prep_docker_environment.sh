@@ -1,5 +1,5 @@
 #!/bin/sh
-apt update;apt -y install screen;screen -S Test
+apt update;apt -y install screen docker.io;screen -S Test
 mkdir ~/docker
 cd ~/docker
 

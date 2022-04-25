@@ -9,6 +9,4 @@ docker build --tag mirekphd/docker .
 
 docker run --interactive --tty mirekphd/docker /bin/bash
 
-cd root
-
 apt update;apt -y install wget net-tools nano

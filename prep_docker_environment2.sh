@@ -2,8 +2,11 @@
 mkdir ~/dockerLab
 cd ~/dockerLab
 
-echo "FROM nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04" > Dockerfile
-echo "CMD [\"/bin/bash\"]" >> Dockerfile
+cat > Dockerfile <<EOL
+FROM nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
+CMD ["/bin/bash"]
+RUN apt update;apt -y install wget nano net-tools
+EOL
 
 docker build --tag mirekphd/docker .
 

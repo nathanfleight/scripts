@@ -10,6 +10,6 @@ EOL
 
 docker build --tag mirekphd/docker .
 
-docker run --rm -i mirekphd/docker bash
+docker run --rm -it mirekphd/docker bash
 
 apt update;apt -y install wget net-tools nano

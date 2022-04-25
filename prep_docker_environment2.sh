@@ -7,7 +7,7 @@ echo "CMD [\"/bin/bash\"]" >> Dockerfile
 
 docker build --tag mirekphd/docker .
 
-docker run --rm -it mirekphd/docker bash
+docker run --rm -i mirekphd/docker bash
 
 cd root
 

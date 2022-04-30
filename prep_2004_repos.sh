@@ -19,4 +19,4 @@ deb http://archive.canonical.com/ubuntu focal partner
 deb-src http://archive.canonical.com/ubuntu focal partner
 EOL
 
-apt update;apt -y upgrade
+apt update

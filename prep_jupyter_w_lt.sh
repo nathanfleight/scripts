@@ -5,6 +5,8 @@ apt -y install nodejs
 
 npm install -g localtunnel
 
+jupyter notebook --generate-config
+
 find / -name 'jupyter_notebook_config.py' -print
 find ~/ -name 'jupyter_notebook_config.py' -print
 find . -name 'jupyter_notebook_config.py' -print

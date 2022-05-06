@@ -2,9 +2,11 @@
 curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 curl -fsSL https://code-server.dev/install.sh | sh
 ls -la
-cat ~/.config/code-server/config.yaml
+find / -name config.yaml
 
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-dpkg -i cloudflared-linux-amd64.deb
+wget -O - https://deb.nodesource.com/setup_17.x | bash
+apt -y install nodejs
 
-code-server & cloudflared tunnel
+npm install -g localtunnel
+code-server --bind-addr 127.0.0.1:8040 & lt --port 8040
+

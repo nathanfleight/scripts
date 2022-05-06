@@ -1,5 +1,5 @@
 #!/bin/sh
-cd ~/
+sudo su -
 curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 curl -fsSL https://code-server.dev/install.sh | sh
 

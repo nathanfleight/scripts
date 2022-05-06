@@ -5,6 +5,6 @@ apt -y install nodejs
 
 npm install -g localtunnel
 
-find / -type f | xargs grep 'jupyter_notebook_config.py'
+find / -name 'jupyter_notebook_config.py' -print
 
 jupyter notebook --port 1234 --allow-root & lt --port 1234

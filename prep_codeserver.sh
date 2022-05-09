@@ -1,19 +1,11 @@
 #!/bin/sh
-sudo su -
-curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
-curl -fsSL https://code-server.dev/install.sh | sh
-
 wget -O - https://deb.nodesource.com/setup_17.x | bash
 apt -y install nodejs
-
 npm install -g localtunnel
 
-code-server &
-
-ls -la
-cat ~/.config/code-server/config.yaml
-
-cd ~/.config/code-server
-cat config.yaml
-
-code-server --bind-addr 127.0.0.1:8040 & lt --port 8040
+wget https://github.com/coder/code-server/releases/download/v4.4.0/code-server-4.4.0-linux-amd64.tar.gz
+tar -xvf code-server-4.4.0-linux-amd64.tar.gz
+cd code-server-4.4.0-linux-amd64
+cd bin
+export PASSWORD="Elibawnos"
+./code-server --bind-addr 127.0.0.1:1234 & lt --port 1234

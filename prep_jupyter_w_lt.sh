@@ -1,6 +1,9 @@
 #!/bin/sh
 
 #pip install jupyter
+
+cd
+
 wget -O - https://deb.nodesource.com/setup_17.x | bash
 apt -y install nodejs
 

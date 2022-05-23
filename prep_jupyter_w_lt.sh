@@ -9,4 +9,6 @@ npm install -g localtunnel
 find ~/ -name 'jupyter_notebook_config.py' -print
 #find . -name 'jupyter_notebook_config.py' -print
 
+ls -la
+
 jupyter notebook --port 1234 --allow-root & lt --port 1234

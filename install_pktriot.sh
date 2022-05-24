@@ -1,4 +1,5 @@
 #!/bin/sh
+apt update;apt -y install libcap2-bin
 apt-get install apt-transport-https gnupg -y
 
 wget -qO - https://download.packetriot.com/linux/debian/pubkey.gpg |  apt-key add - 

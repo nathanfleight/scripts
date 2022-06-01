@@ -1,7 +1,8 @@
 #!/bin/sh
 
-apt -y install python3-pip >/dev/null
-pip install jupyter
+apt -y install python3 python3-pip
+pip3 install --upgrade pip
+pip3 install jupyter
 
 cd
 

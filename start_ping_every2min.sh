@@ -1,6 +1,6 @@
 #!/bin/sh
-apt update >/dev/null
-apt -y install iputils-ping >/dev/null
+
+sleep .10
 
 while true
 do

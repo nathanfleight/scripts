@@ -1,6 +1,7 @@
 #!/bin/sh
 
-#pip install jupyter
+apt -y install python3-pip >/dev/null
+pip install jupyter
 
 cd
 

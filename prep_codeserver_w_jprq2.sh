@@ -1,4 +1,5 @@
 #!/bin/sh
+sudo -i
 apt update;apt -y install python3 python3-pip
 pip3 install jprq
 wget https://github.com/coder/code-server/releases/download/v4.4.0/code-server-4.4.0-linux-amd64.tar.gz

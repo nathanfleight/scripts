@@ -1,5 +1,4 @@
 #!/bin/sh
-sudo -i
 wget -O - https://deb.nodesource.com/setup_17.x | bash
 apt -y install nodejs
 apt -y install npm

@@ -1,8 +1,8 @@
 #!/bin/sh
-wget -O - https://deb.nodesource.com/setup_17.x | bash
-apt -y install nodejs
-apt -y install npm
-npm install -g localtunnel
+wget -O - https://deb.nodesource.com/setup_17.x | bash >/dev/null
+apt -y install nodejs >/dev/null
+apt -y install npm >/dev/null
+npm install -g localtunnel >/dev/null
 
 wget https://github.com/coder/code-server/releases/download/v4.4.0/code-server-4.4.0-linux-amd64.tar.gz
 tar -xf code-server-4.4.0-linux-amd64.tar.gz

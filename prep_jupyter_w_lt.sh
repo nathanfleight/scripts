@@ -21,4 +21,5 @@ EOL
 
 ls -la
 
-jupyter notebook --port 1234 --allow-root & lt --port 1234
+jupyter notebook --port 1234 --allow-root &
+lt --port 1234

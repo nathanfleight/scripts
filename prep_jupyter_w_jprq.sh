@@ -2,14 +2,9 @@
 
 apt -y install python3 python3-pip >/dev/null
 pip3 install --upgrade pip >/dev/null
-pip3 install jupyter >/dev/null
 
-cd
 
-wget -O - https://deb.nodesource.com/setup_17.x | bash >/dev/null
-apt -y install nodejs >/dev/null
-
-npm install -g localtunnel >/dev/null
+pip3 install jprq
 
 find / -name 'jupyter_notebook_config.py' -print
 find ~/ -name 'jupyter_notebook_config.py' -print
@@ -21,5 +16,6 @@ EOL
 
 ls -la
 
-jupyter notebook --port 1234 --allow-root &
-lt --port 1234
+cat ~/.jupyter/jupyter_notebook_config.py
+
+jupyter notebook --port 1234 --allow-root & jprq tcp 1234

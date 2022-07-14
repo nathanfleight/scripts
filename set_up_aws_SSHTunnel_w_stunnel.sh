@@ -26,6 +26,7 @@ cd
 cat > /etc/rc.local <<END
 #!/bin/sh
 badvpn-udpgw --listen-addr 0.0.0.0:7300 > /dev/null &
+service stunnel4 restart
 END
 chmod +x /etc/rc.local
 
